@@ -1,0 +1,28 @@
+.main-layout {
+    display: grid;
+    grid-template-columns: $layoutPadding 1fr $layoutPadding;
+
+    >* {
+        grid-column: 2;
+    }
+
+    *.full {
+        grid-column: 1 / -1;
+    }
+
+    *:not(.full) {
+        // display: grid;
+        // grid-auto-flow: dense;
+        // grid-template-columns: repeat( 6, 1fr );
+        // background-color: aqua;
+    }
+
+    @include for-narrow-layout {
+        grid-template-columns:
+            minmax(30px, 1fr) minmax(auto, $mobile-breakpoint) minmax(30px, 1fr);
+    }
+
+    @include for-wide-layout {
+        grid-template-columns: 140px 1fr 140px;
+    }
+}

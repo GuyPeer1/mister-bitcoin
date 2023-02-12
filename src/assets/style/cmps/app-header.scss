@@ -1,13 +1,17 @@
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    height: 5vh;
-    padding-inline: 10px;
-    background-color: lightblue;
+.wrapper {
+    background-color: $darkGreen;
 
-    a {
-        margin-inline-start: 1em;
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $white;
+        height: 5vh;
+        padding-inline: 10px;
+
+        a {
+            margin-inline-start: 1em;
+            color: $atxt
+        }
     }
 }

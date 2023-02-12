@@ -1,8 +1,9 @@
-footer {
-    display: flex;
-    align-items: center;
-    height: 5vh;
-    
-    padding-inline: 10px;
-    background-color: lightblue;
+.wrapper {
+    footer {
+        display: flex;
+        align-items: center;
+        height: 5vh;
+        padding-inline: 10px;
+        color: $white;
+    }
 }
