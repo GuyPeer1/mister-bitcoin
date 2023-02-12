@@ -29,7 +29,7 @@ async function getMarketPriceHistory() {
     try {
         let data = storageService.oldGet(db_key_history)
         if (!data) {
-            res = await axios.get('https://api.blockchain.info/charts/market-price?timespan=5months&format=json&cors=true')
+            let res = await axios.get('https://api.blockchain.info/charts/market-price?timespan=5months&format=json&cors=true')
             data = res.data
             storageService.oldSave(db_key_history, data)
         }

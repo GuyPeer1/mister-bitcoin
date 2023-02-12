@@ -4,7 +4,7 @@
         <h2>Mister Bitcoin</h2>
         <nav>
             <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/bit">Bitcon</RouterLink>
+            <RouterLink to="/stats">Stats</RouterLink>
             <RouterLink to="/about">About</RouterLink>
         </nav>
     </header>

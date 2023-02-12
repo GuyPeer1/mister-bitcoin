@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 import HomeView from '../pages/home-page.vue'
+import Chart from '../pages/statistics.vue'
 
 const routerOptions = {
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -9,10 +10,10 @@ const routerOptions = {
             path: '/',
             component: HomeView,
         },
-        // {
-        //     path: '/car',
-        //     component: CarIndex,
-        // },
+        {
+            path: '/stats',
+            component: Chart,
+        },
         // {
         //     path: '/car/:_id',
         //     component: CarDetails,
