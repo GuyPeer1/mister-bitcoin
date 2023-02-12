@@ -1,0 +1,58 @@
+.contact-list {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 30px;
+
+    .list-btns {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        .details {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 25px;
+            border: 2px solid;
+            background-color: #fff;
+            cursor: pointer;
+            box-shadow: 0 0 10px #333;
+            overflow: hidden;
+            transition: .3s;
+
+            svg {
+                position: absolute;
+                transform: translate(20%, 20%);
+                transition: .3s;
+            }
+        }
+
+
+        .btn-delete {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 25px;
+            border: 2px solid rgb(231, 50, 50);
+            background-color: #fff;
+            cursor: pointer;
+            box-shadow: 0 0 10px #333;
+            overflow: hidden;
+            transition: .3s;
+
+            svg {
+                color: rgb(231, 50, 50);
+                position: absolute;
+                transform: translate(-50%, -50%);
+                transition: .3s;
+            }
+
+            :hover {
+                background-color: rgb(245, 207, 207);
+                box-shadow: 0 0 4px #111;
+                transition: .3s;
+            }
+        }
+    }
+}

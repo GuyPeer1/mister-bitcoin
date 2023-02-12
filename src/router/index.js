@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 import HomeView from '../pages/home-page.vue'
 import Chart from '../pages/statistics.vue'
+import ContactIndex from '../pages/contact-index.vue'
+import ContactDetails from '../pages/contact-details.vue'
 
 const routerOptions = {
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -14,14 +16,14 @@ const routerOptions = {
             path: '/stats',
             component: Chart,
         },
-        // {
-        //     path: '/car/:_id',
-        //     component: CarDetails,
-        // },
-        // {
-        //     path: '/car/edit/:_id?',
-        //     component: CarEdit,
-        // },
+        {
+            path: '/contact',
+            component: ContactIndex,
+        },
+        {
+            path: '/contact/:_id',
+            component: ContactDetails,
+        },
         {
             path: '/about',
             // route level code-splitting

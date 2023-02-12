@@ -1,13 +1,21 @@
 // Setup
+@import "setup/typography";
 @import "setup/variables";
 @import "setup/functions";
 @import "setup/mixins";
-@import "setup/typography";
 
 // Basics
 @import "basics/helpers";
 @import "basics/layout";
 @import "basics/base";
 
+// Cmps
 @import 'cmps/app-header.scss';
 @import 'cmps/app-footer.scss';
+@import 'cmps/contact-list.scss';
+@import 'cmps/contact-preview.scss';
+
+
+//Pages
+@import 'pages/contact-index.scss';
+@import 'pages/contact-details.scss';
