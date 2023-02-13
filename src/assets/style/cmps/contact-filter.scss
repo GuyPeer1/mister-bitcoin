@@ -1,0 +1,15 @@
+.contact-filter {
+    display: flex;
+    justify-self: center;
+    width: 25%;
+    padding: 16px;
+
+    .filter-input {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 16px;
+        border: none;
+        background-color: $white;
+        text-align: center;
+    }
+}

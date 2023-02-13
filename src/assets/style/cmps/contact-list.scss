@@ -1,8 +1,20 @@
 .contact-list {
     display: grid;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
+
+    @include for-narrow-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-normal-layout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include for-wide-layout {
+        grid-template-columns: repeat(5, 1fr);
+    }
 
     .list-btns {
         display: flex;

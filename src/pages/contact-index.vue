@@ -1,7 +1,7 @@
 <template>
   <article class="wrapper main-layout">
   <div class="contact-index full main-layout">
-    <!-- <ContactFilter @filter="onSetFilterBy" /> -->
+    <ContactFilter @filter="onSetFilterBy" />
     <ContactList
       v-if="contacts"
       :contacts="filteredContacts"
