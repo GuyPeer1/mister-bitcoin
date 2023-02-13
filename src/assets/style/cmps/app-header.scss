@@ -6,8 +6,7 @@
         align-items: center;
         justify-content: space-between;
         color: $white;
-        height: 5vh;
-        padding-inline: 10px;
+        min-height: 5vh;
 
         a {
             margin-inline-start: 1em;

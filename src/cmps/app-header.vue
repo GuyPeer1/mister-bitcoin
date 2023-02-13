@@ -2,8 +2,8 @@
   <article className="wrapper full main-layout" v-if="user">
     <header>
       <h2>Mister Bitcoin</h2>
+       <div class="header-txt"> Hey there, {{ user.name }} 1 Bitcoin = {{ exchangeRate }}$ </div>
       <nav>
-        Hey there, {{ user.name }} 1 Bitcoin = {{ exchangeRate }}$
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/stats">Stats</RouterLink>
         <RouterLink to="/contact">Contacts</RouterLink>
