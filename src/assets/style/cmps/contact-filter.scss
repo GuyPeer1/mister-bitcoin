@@ -4,12 +4,13 @@
     width: 25%;
     padding: 16px;
 
+
     .filter-input {
+        border: 1px solid #ccc;
+        border-radius: 16px;
         padding: 10px;
         font-size: 16px;
-        border-radius: 16px;
-        border: none;
-        background-color: $white;
         text-align: center;
+        font-weight: bold;
     }
 }

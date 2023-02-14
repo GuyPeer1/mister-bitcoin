@@ -1,6 +1,7 @@
 <template>
   <div class="contact-preview">
-     <img :src="'https://robohash.org/' + contact.name" alt="contact" />
+     <!-- <img :src="'https://robohash.org/' + contact.name" alt="contact" /> -->
+     <img :src="contact.imgUrl" alt="contact" />
     <div class="preview-txt">
       <span>{{ contact.name }}</span>
       <!-- <span> {{ contact.email }}</span> -->

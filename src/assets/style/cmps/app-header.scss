@@ -1,16 +1,27 @@
 .wrapper {
-    background-color: $darkGreen;
+  background-color: $darkGreen;
 
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: $white;
-        min-height: 5vh;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    min-height: 5vh;
 
-        a {
-            margin-inline-start: 1em;
-            color: $atxt
-        }
+    a {
+      margin-inline-start: 1em;
+      color: $atxt;
     }
+
+    .header-txt {
+      font-weight: bold;
+    }
+  }
 }
+
+nav a.router-link-exact-active {
+    color: #f7931a;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  

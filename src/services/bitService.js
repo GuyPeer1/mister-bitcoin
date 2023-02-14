@@ -2,6 +2,7 @@ import axios from "axios"
 import { storageService } from './async-storage.service'
 const db_key = 'db_key'
 const db_key_history = 'db_key_history'
+const db_key_block = 'db_key_block'
 
 export const bitService = {
     getRate,
@@ -41,6 +42,17 @@ async function getMarketPriceHistory() {
     }
 }
 
-function getAvgBlockSize() {
-
+async function getAvgBlockSize() {
+    try {
+        let data = storageService.oldGet(db_key_block)
+        if (!data) {
+            const res = await axios.get('https://api.blockchain.info/charts/avg-block-size?timespan=5months&format=json&cors=true')
+            data = res.data
+            storageService.oldSave(db_key_block, data)
+        }
+        return data
+    } catch (err) {
+        console.log('there was an error')
+        throw err
+    }
 }

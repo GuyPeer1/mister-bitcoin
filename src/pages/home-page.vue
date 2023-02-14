@@ -1,7 +1,9 @@
 <template>
-  <h1>Home</h1>
+<section class="home-page">
   <h2>Hello, {{user.name}}</h2>
   <h2>Bitcoin to $: {{exchangeRate}}</h2>
+   <img :src="user.imgUrl" alt="contact" />
+</section>
 </template>
 
 <script>

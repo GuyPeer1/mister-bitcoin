@@ -1,9 +1,9 @@
-import { contactService } from '../services/contactService.js'
+import { contactService } from '../services/contact-service.js'
 import {createStore } from 'vuex'
 
 export const store = createStore({
     state: {
-        contacts: [''],
+        contacts: [],
         lastRemovedContact: null
     },
     getters: {
@@ -18,8 +18,8 @@ export const store = createStore({
         setContacts(state, { contacts }) {
             state.contacts = contacts
         },
-        removeContact(state, { contactId }) {
-            const idx = state.contacts.findIndex(c => c._id === contactId)
+        removeContact(state, { id }) {
+            const idx = state.contacts.findIndex(c => c._id === id)
             state.lastRemovedContact = state.contacts[idx]
             state.contacts.splice(idx, 1)
         },
@@ -41,7 +41,7 @@ export const store = createStore({
     },
     actions: {
         loadContacts({ commit }) {
-            contactService.getContacts()
+            contactService.query()
                 .then((contacts) => {
                     commit({ type: 'setContacts', contacts })
                 })
@@ -49,7 +49,7 @@ export const store = createStore({
         async removeContact({ commit }, payload) {
             commit(payload)
             try {
-                await contactService.deleteContact(payload.contactId)
+                await contactService.remove(payload.id)
                 commit({ type:  'clearRemoveContact' })
             } catch (err) {
                 commit({ type: 'undoRemoveContact' })

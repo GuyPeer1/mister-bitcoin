@@ -4,8 +4,9 @@ export const userService = {
 
 function getUser(id) {
     return {
-        name: "Puki Ben David",
+        name: "Kramer",
         balance: 100,
-        transactions: []
+        transactions: [],
+        imgUrl: 'https://assets.mycast.io/actor_images/actor-cosmo-kramer-148577_large.jpg?1606447562',
     }
 }

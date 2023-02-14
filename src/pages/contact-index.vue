@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     contacts() {
-      return this.$store.state.contacts;
+      return this.$store.getters.contacts;
     },
     filteredContacts() {
       const regex = new RegExp(this.filterBy.txt, "i");
@@ -39,7 +39,6 @@ export default {
     },
     async removeContact(id) {
       try {
-        console.log(id);
         await this.$store.dispatch({ type: "removeContact", id });
         // showSuccessMsg("Product removed");
       } catch (err) {

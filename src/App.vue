@@ -16,9 +16,3 @@ export default {
     </main>
     <AppFooter />
 </template>
-
-<style scoped>
-main {
-    min-height: calc(90vh - 4rem);
-}
-</style>
