@@ -10,7 +10,19 @@ export const contactService = {
   remove,
   save,
   getEmptyContact,
+  getEmptyTransaction
 };
+
+function getEmptyTransaction() {
+  const transaction =
+  {
+      toId: "",
+      to: "",
+      at: Date.now(),
+      amount: 0,
+  }
+  return transaction
+}
 
 async function query() {
   var contacts = await dbService.query(KEY)
